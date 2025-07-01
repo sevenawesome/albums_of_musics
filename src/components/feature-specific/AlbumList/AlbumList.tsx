@@ -24,7 +24,7 @@ export default function AlbumList({ albums, onAlbumClick, viewMode }: AlbumListP
     const generateAlbumList = () => {
 
         return <>
-            <ul className="p-5 divide-y divide-gray-200 dark:divide-gray-700">
+            <ul className="p-5 divide-y divide-gray-200 dark:divide-gray-700 cursor-pointer">
                 {albums.map((album) => {
                     return (
                         <li className="pb-3 sm:pb-4 hover:bg-gray-100 hover:p-5" key={album.id} onClick={() => onAlbumClick && onAlbumClick(album)}>
@@ -36,7 +36,7 @@ export default function AlbumList({ albums, onAlbumClick, viewMode }: AlbumListP
                                     <p className="text-sm font-medium text-gray-900 dark:text-white">
                                         {album.name}
                                     </p>
-                                    <p className="text-sm text-gray-500  dark:text-gray-400">
+                                    <p className="text-sm text-gray-500  dark:text-gray-400 ">
                                         {album?.description ? album.description : "No description available"}
                                     </p>
                                 </div>
@@ -57,7 +57,7 @@ export default function AlbumList({ albums, onAlbumClick, viewMode }: AlbumListP
 
                 {albums.map((album) => {
                     return (
-                        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-amber-100 hover:p-5" key={album.id} onClick={() => onAlbumClick && onAlbumClick(album)}>
+                        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-amber-100 hover:p-5 cursor-pointer" key={album.id} onClick={() => onAlbumClick && onAlbumClick(album)}>
                             <a href="#">
                                 <img className="rounded-t-lg" src={`${assetsUrl}${album.imageName}`} alt="" />
                             </a>
