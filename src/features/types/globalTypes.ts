@@ -45,12 +45,14 @@ export interface Song {
   title: string;
   artist: Artist;
   type: MusicTypeEnum;
-  album: Album;
+  albumId: string;
+  albumName: string;
   duration: number; // in seconds
+  durationLabel:string;
   coverUrl: string;
   audioUrl: string;
   lyrics: Lyrics;
-  orderNumber?: number; // Position in the album
+  orderNumber: number; // Position in the album
   releaseDate: string; // ISO date string
   createDate: string; // ISO date string
   language?: Language; // Optional, for multilingual support
@@ -67,9 +69,9 @@ export interface Lyrics {
 export interface LyricsContent {
   id: string
   lyricsId: string;
-  orderNumber: number; // Position in the lyrics
-  isChorus: boolean; // Indicates if this part is a chorus
-  text: string; // The actual lyrics text
+  orderNumber: number;
+  isChorus: boolean;
+  texts: string[];
 }
 
 export interface LyricsKaraoke {

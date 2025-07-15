@@ -10,5 +10,12 @@ export const selectAlbumById = createSelector(
     }
 );
 
+export const selectSongById = createSelector(
+    [selectAllAlbums, (state: GlobalState, albumId,songId) => {return {albumId,songId}}],
+    (albums, {albumId,songId}) => {
+        return albums.find(a=>a.id === albumId)?.songs?.find(s=> s.id === songId)
+    }
+);
+
 
 

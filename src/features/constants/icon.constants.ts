@@ -6,4 +6,6 @@ export const ICON_CONSTANTS = {
     searchIcon: 'SearchIcon',
     listIcon: 'ListIcon',
     cardIcon: 'CardIcon',
+    music: 'Music',
+    angleLeft: 'AngleLeft',
 };
